@@ -1,123 +1,73 @@
-# VUB LaTeX Template# LaTeX Project Template - VUB Style
+# VUB LaTeX Template
 
+A clean, organized LaTeX template for academic reports using the VUB (Vrije Universiteit Brussel) official style with modular section files.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A clean, organized LaTeX template for academic reports using the VUB (Vrije Universiteit Brussel) official style with modular section files.A clean, organized LaTeX project template for academic reports using the VUB (Vrije Universiteit Brussel) style.
+## ✨ Features
 
+- **VUB Official Branding**: VUB logo, colors, and fonts (TeX Gyre Adventor)
+- **Modular Structure**: Separate section files for easy organization
+- **VS Code Integration**: One-click compilation with green run button
+- **Build Automation**: Organized build artifacts in dedicated folder
+- **Comprehensive Documentation**: All-in-one README
+- **Ready to Use**: Just clone and start writing!
 
+## 📁 Project Structure
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)## 📁 Project Structure
-
-
-
-## ✨ Features```
-
-latex-exercise3/
-
-- **VUB Official Branding**: VUB logo, colors, and fonts (TeX Gyre Adventor)├── main.tex                 # Main LaTeX document
-
-- **Modular Structure**: Separate section files for easy organization├── main.pdf                 # Compiled PDF output
-
-- **VS Code Integration**: One-click compilation with green run button├── vub_logo_cmyk.pdf        # VUB official logo
-
-- **Build Automation**: Organized build artifacts in dedicated folder├── README.md                # This file
-
-- **Comprehensive Documentation**: All-in-one README├── bib/                    # Bibliography directory
-
-- **Ready to Use**: Just clone and start writing!│   └── main.bib            # BibTeX bibliography file
-
-├── styles/                 # Custom style files
-
-## 📁 Project Structure│   └── vubprivate.sty      # VUB private styling
-
-└── build/                  # Build artifacts (auto-generated, git-ignored)
-
-```    ├── main.aux            # Auxiliary file
-
-latex-template/    ├── main.bbl            # Bibliography output
-
-├── main.tex                    # Main LaTeX document    ├── main.blg            # Bibliography log
-
-├── vub_logo_cmyk.pdf          # VUB official logo    ├── main.fdb_latexmk    # Latexmk database
-
-├── README.md                  # This file    ├── main.fls            # File list
-
-├── .vscode/    ├── main.log            # Compilation log
-
-│   └── settings.json          # VS Code LaTeX Workshop configuration    ├── main.synctex.gz     # SyncTeX for editor sync
-
-├── bib/    └── main.toc            # Table of contents
-
-│   └── main.bib               # BibTeX bibliography file```
-
+```
+latex-template/
+├── main.tex                    # Main LaTeX document
+├── vub_logo_cmyk.pdf          # VUB official logo
+├── README.md                  # This file
+├── LICENSE                    # MIT License
+├── .vscode/
+│   └── settings.json          # VS Code LaTeX Workshop configuration
+├── bib/
+│   └── main.bib               # BibTeX bibliography file
 ├── styles/
-
-│   └── vubprivate.sty         # VUB custom styling (colors, fonts, triangle)## 🚀 Quick Start
-
+│   └── vubprivate.sty         # VUB custom styling (colors, fonts, triangle)
 ├── sections/
-
-│   ├── 01-introduction.tex    # Introduction section### Prerequisites
-
-│   ├── 02-methods.tex         # Methods section- **MiKTeX** or **TeX Live** LaTeX distribution
-
-│   ├── 03-results.tex         # Results section- **Perl** (required by latexmk) - [Install Strawberry Perl](http://strawberryperl.com/)
-
-│   ├── 04-discussion.tex      # Discussion section- **VS Code** (optional) with LaTeX Workshop extension
-
+│   ├── 01-introduction.tex    # Introduction section
+│   ├── 02-methods.tex         # Methods section
+│   ├── 03-results.tex         # Results section
+│   ├── 04-discussion.tex      # Discussion section
 │   └── 05-conclusion.tex      # Conclusion section
-
-└── build/                     # Build artifacts (auto-generated, git-ignored)### Building the Document
-
+└── build/                     # Build artifacts (auto-generated, git-ignored)
+    ├── main.aux               # Auxiliary file
+    ├── main.bbl               # Bibliography output
+    ├── main.blg               # Bibliography log
+    ├── main.fdb_latexmk       # Latexmk database
+    ├── main.fls               # File list
+    ├── main.log               # Compilation log
+    ├── main.pdf               # Final PDF output
+    ├── main.synctex.gz        # SyncTeX for editor sync
+    └── main.toc               # Table of contents
 ```
 
-#### Option 1: Automated Build Script (Recommended)
+---
 
----From the project root directory:
-
-```powershell
-
-## 🚀 Quick Start.\build-latex.ps1
-
-```
+## 🚀 Quick Start
 
 ### Prerequisites
 
-This script:
+- **LaTeX Distribution**: [MiKTeX](https://miktex.org/) (Windows) or [TeX Live](https://www.tug.org/texlive/) (Linux/Mac)
+- **Perl**: Required by latexmk - [Strawberry Perl](http://strawberryperl.com/) (Windows)
+- **VS Code** (recommended): With [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension
 
-- **LaTeX Distribution**: [MiKTeX](https://miktex.org/) (Windows) or [TeX Live](https://www.tug.org/texlive/) (Linux/Mac)- Navigates to the latex-exercise3/ directory
-
-- **Perl**: Required by latexmk - [Strawberry Perl](http://strawberryperl.com/) (Windows)- Sets up the TEXINPUTS environment for style files
-
-- **VS Code** (recommended): With [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension- Cleans previous build artifacts
-
-- Compiles the document with latexmk
-
-### Using This Template- Copies the final PDF to latex-exercise3/main.pdf
-
-- Keeps all build artifacts in build/ folder
+### Using This Template
 
 #### Option 1: Clone and Start Writing (Recommended)
 
-#### Option 2: Manual Compilation
+```bash
+# Clone this repository
+git clone https://github.com/JonasBil/vub-latex-template.git my-project
+cd my-project
 
-```bashFrom the `latex-exercise3/` directory:
+# Open in VS Code
+code .
 
-# Clone this repository```bash
-
-git clone https://github.com/JonasBil/vub-latex-template.git my-projectlatexmk -pdf -interaction=nonstopmode -outdir=build main.tex
-
-cd my-project```
-
-
-
-# Open in VS Code#### Option 3: VS Code LaTeX Workshop
-
-code .With the LaTeX Workshop extension installed:
-
-- Press `Ctrl+Alt+B` to build
-
-# Edit main.tex and section files, then press Ctrl+Alt+B to compile- Or click the green play button in the top right
-
+# Edit main.tex and section files, then press Ctrl+Alt+B to compile
 ```
 
 #### Option 2: Manual Compilation
