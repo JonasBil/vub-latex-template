@@ -81,7 +81,107 @@ The compiled PDF will be in `build/main.pdf`.
 
 ---
 
-## 📝 Writing Your Document
+## � Recommended VS Code Extensions
+
+To enhance your LaTeX workflow, install these extensions:
+
+### Essential Extensions
+
+1. **LaTeX Workshop** (James-Yu.latex-workshop) - Already recommended
+   - One-click compilation (`Ctrl+Alt+B`)
+   - Live PDF preview
+   - Syntax highlighting and IntelliSense
+   - Auto-completion for LaTeX commands
+
+2. **Code Spell Checker** (streetsidesoftware.code-spell-checker)
+   - Real-time spell checking
+   - LaTeX-aware (ignores commands)
+   - Right-click for suggestions
+
+3. **LaTeX Utilities** (tecosaur.latex-utilities)
+   - Live word count in status bar
+   - Enhanced formatting
+   - Paste images from clipboard
+   - TikZ preview
+
+### Helpful Extensions
+
+4. **Markdown All in One** (yzhang.markdown-all-in-one)
+   - Better README editing
+   - Live preview (`Ctrl+Shift+V`)
+   - Auto-formatting for markdown
+
+5. **Git Graph** (mhutchie.git-graph)
+   - Visual git history
+   - See commits, branches, and changes
+   - Click the graph icon in status bar
+
+### Installation
+
+Install extensions via:
+1. Press `Ctrl+Shift+X` to open Extensions
+2. Search for extension name
+3. Click Install
+
+Or use command line:
+```bash
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension tecosaur.latex-utilities
+code --install-extension yzhang.markdown-all-in-one
+code --install-extension mhutchie.git-graph
+```
+
+---
+
+## 📏 Enable Word Wrap
+
+Long lines in LaTeX can extend beyond your screen. Enable word wrap to make them wrap automatically:
+
+**Quick method:** Press `Alt+Z` (toggles word wrap on/off)
+
+**Permanent setting:**
+1. Press `Ctrl+,` to open Settings
+2. Search for "word wrap"
+3. Change **Editor: Word Wrap** to `on`
+
+---
+
+## 📚 Zotero Integration
+
+Connect Zotero for easy citation management:
+
+### Step 1: Install Better BibTeX in Zotero
+1. In Zotero: **Tools** → **Add-ons**
+2. Search for "Better BibTeX for Zotero"
+3. Install and restart Zotero
+
+### Step 2: Export Your Library
+1. In Zotero, right-click your library or collection
+2. Select **Export Library/Collection...**
+3. Format: **Better BibTeX**
+4. ✅ Check **Keep updated** (auto-syncs!)
+5. Save as `bib/main.bib` in your project folder
+
+### Step 3: Use in VS Code
+- Type `\cite{` and see autocomplete from your Zotero library
+- Search by author, title, or citation key
+- Compile LaTeX to see formatted citations
+
+### Configure Citation Keys (Optional)
+In Zotero:
+1. **Tools** → **Better BibTeX** → **Preferences**
+2. Set **Citation key format**: `[auth][year]`
+   - Creates keys like `Smith2025` instead of random strings
+
+**Workflow:**
+1. Add paper to Zotero
+2. Zotero auto-updates `bib/main.bib` (if "Keep updated" enabled)
+3. Type `\cite{` in VS Code → see your references
+4. Compile → citations appear!
+
+---
+
+## �📝 Writing Your Document
 
 ### 1. Update Document Information
 
