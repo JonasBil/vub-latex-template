@@ -1,0 +1,58 @@
+%! Author = Your Name
+%! Date = DD/MM/YYYY
+% !TEX program = pdflatex
+% !TEX option = -interaction=nonstopmode
+
+% Preamble
+\documentclass[a4paper]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{../archive/Latex/texlive-vub-v3.0.1/vub}  % VUB theme
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{apacite} % APA style citations
+
+%Pagestyle---------------------------------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parindent}{0pt}
+\fancyhead{} % Clears default header and footer
+\fancyfoot{}
+\fancyfoot[LE, RO]{\thepage}
+\fancyfoot[LO, RE]{Your Name}  % Change to your name
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+%Document information----------------------------------------------------
+\title{Your Document Title}
+\faculty{Sciences and Bio-Engineering Sciences} % VUB Faculty name
+\author{Your Name}
+
+% Document
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \newpage
+
+    % Include section files
+    % This keeps the main file clean and organized
+    \input{sections/01-introduction}
+    \input{sections/02-methods}
+    \input{sections/03-results}
+    \input{sections/04-discussion}
+    \input{sections/05-conclusion}
+
+    \newpage
+
+    \bibliographystyle{apacite}
+    \bibliography{bib/main} % References the bib/main.bib file
+
+    \section*{Acknowledgments}
+    Acknowledge any contributions, funding, or assistance here.
+\end{document}
