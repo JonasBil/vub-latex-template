@@ -1,12 +1,12 @@
 # VUB LaTeX Template
 
-A clean, organized LaTeX template for academic reports using the VUB (Vrije Universiteit Brussel) official style with modular section files.
+A LaTeX template for academic reports using the VUB (Vrije Universiteit Brussel) official style with modular section files.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ Features
 
-- **VUB Official Branding**: VUB logo, colors, and fonts (TeX Gyre Adventor)
+- **VUB Branding**: VUB logo, colors, and fonts (TeX Gyre Adventor)
 - **Modular Structure**: Separate section files for easy organization
 - **VS Code Integration**: One-click compilation with green run button
 - **Build Automation**: Organized build artifacts in dedicated folder
@@ -17,7 +17,7 @@ A clean, organized LaTeX template for academic reports using the VUB (Vrije Univ
 
 ```
 latex-template/
-├── main.tex                    # Main LaTeX document
+├── main.tex                   # Main LaTeX document
 ├── vub_logo_cmyk.pdf          # VUB official logo
 ├── README.md                  # This file
 ├── LICENSE                    # MIT License
@@ -323,7 +323,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ### Areas for Contribution
 - Additional section templates
 - More examples (figures, tables, algorithms)
-- Multilingual support
 - Additional documentation
 - Bug fixes
 
